@@ -1,0 +1,702 @@
+/* fonts*/
+@font-face {
+  font-family: Raleway-semibold;
+  src: url(../font/Raleway-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Raleway-bold;
+  src: url(../font/Raleway-Bold.ttf);
+}
+@font-face {
+  font-family: Raleway-extrabold;
+  src: url(../font/Raleway-Extrabold.ttf);
+}
+
+@font-face {
+  font-family: Raleway-regular;
+  src: url(../font/Raleway-Regular.ttf);
+}
+
+@font-face {
+  font-family: Raleway-medium;
+  src: url(../font/Raleway-Medium.ttf);
+}
+
+@font-face {
+  font-family: Raleway-black;
+  src: url(../font/Raleway-Black.ttf);
+}
+
+@font-face {
+  font-family: Raleway-blackitalic;
+  src: url(../font/Raleway-BlackItalic.ttf);
+}
+
+@font-face {
+  font-family: Raleway-italic;
+  src: url(../font/Raleway-Italic.ttf);
+}
+
+@font-face {
+  font-family: Raleway-light;
+  src: url(../font/Raleway-Light.ttf);
+}
+
+@font-face {
+  font-family: Raleway-thin;
+  src: url(../font/Raleway-Thin.ttf);
+}
+
+/* colors */
+
+:root {
+  --primary: #eebf00;
+  --secondary: #232b38;
+  --ternary: #6c6c6c;
+  --danger: rgb(182, 37, 37);
+  --pure: #fefefefe;
+  --light: #f0f0f0;
+  --heaven: #ffffff;
+  --footer: #2d333f;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+
+  font-family: "Raleway-regular";
+}
+
+/*reset*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1152px;
+  }
+}
+header.topband {
+  background: var(--secondary);
+  color: var(--pure);
+  font-family: "Raleway-semibold";
+  padding: 0.75rem 0;
+}
+
+.auth > div a {
+  color: var(--pure);
+
+  text-decoration: none;
+}
+.icon a {
+  margin-right: 0.6rem;
+}
+.divider {
+  padding: 1rem;
+}
+.auth > div img {
+  margin-right: 0.35rem;
+}
+
+.flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.items-center {
+  align-items: center;
+}
+.top {
+  padding: 1.5rem 0;
+}
+
+.contact h5,
+.time h5 {
+  font-family: "raleway-black";
+  margin-bottom: 0.25rem;
+}
+
+.contact h6 .time h6 {
+  font-family: "raleway-medium";
+  letter-spacing: 0.055rem;
+  font-size: 0.75rem;
+  color: var(--ternary);
+}
+.container img {
+  margin-right: 1rem;
+}
+.time img {
+  margin-right: 1rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-family: "Raleway-semibold";
+  font-size: 1rem;
+
+  padding: 1rem 1.5rem;
+  transition: all 0.3s ease;
+}
+.navbar a.active {
+  background: var(--primary);
+  color: var(--pure);
+}
+.navbar a:hover {
+  background: var(--primary);
+  color: var(--pure);
+}
+.magic-shadow {
+  position: relative;
+  background: var(--heaven);
+}
+.magic-shadow::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 70px;
+  background-image: url(../icon/shadow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  position: absolute;
+  bottom: -20px;
+}
+.magic-shadow-sm {
+  position: relative;
+  background: var(--heaven);
+}
+.magic-shadow-sm::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 70px;
+  background-image: url(../icon/shadow-sm.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  position: absolute;
+  bottom: -20px;
+}
+.magic-shadow-smtg {
+  position: relative;
+  background: var(--heaven);
+}
+header.hero {
+  height: 600px;
+  background-image: url(../images/hero.png);
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.container {
+  position: relative;
+}
+.welcome {
+  margin-top: 7rem;
+  margin-bottom: 0.25rem;
+}
+.welcome span {
+  font-family: "Raleway-bold";
+  color: var(--secondary);
+  margin-right: 0.75rem;
+}
+header.hero h1 {
+  font-family: "Raleway-extrabold";
+  color: var(--secondary);
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+.hero h1 span {
+  color: var(--primary);
+}
+header.hero p {
+  font-family: "Raleway-medium";
+  width: 50%;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.btn {
+  padding: 0.75rem 0.75rem;
+  border-radius: 4px;
+  line-height: 0.8;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+.btn-primary {
+  background: var(--primary);
+  color: var(--heaven);
+}
+.btn-primary:hover {
+  background: var(--heaven);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+.btn-secondary {
+  background: var(--secondary);
+  color: var(--heaven);
+}
+
+.btn-secondary:hover {
+  background: var(--heaven);
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+}
+header.hero button:first-child {
+  margin-right: 0.5rem;
+}
+.hero-image {
+  position: absolute;
+  top: -40px;
+  right: 40px;
+}
+
+section {
+  padding: 4rem 0;
+}
+section.top-products {
+  background: var(--light);
+}
+.section-heading {
+  font-family: "Raleway-bold";
+  text-align: center;
+  position: relative;
+  margin-bottom: 6rem;
+}
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 30px;
+  background-image: url(../icon/hr.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: -40px;
+}
+.food-card {
+  background: var(--heaven);
+  padding: 1.5rem 0;
+  border-radius: 5px;
+}
+.product-image img {
+  width: 80%;
+  height: 200px;
+  object-fit: contain;
+  padding-bottom: 1rem;
+}
+hr {
+  border: 1px solid var(--light);
+  opacity: 0.8;
+  margin: 1rem 0;
+}
+.food-card h2 {
+  font-family: "Raleway-Bold";
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+}
+.text-center {
+  text-align: center;
+}
+.stars {
+  margin-bottom: 0.5rem;
+}
+.stars img {
+  margin-right: 0.5rem;
+}
+.price {
+  font-family: " Raleway-medium ";
+  color: var(--danger);
+  margin-bottom: 1rem;
+}
+.food-card button {
+  font-family: "Raleway-medium";
+  color: var(--secondary);
+  background: var(--heaven);
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3sec ease;
+}
+.food-card button:hover {
+  background: var(--primary);
+  color: var(--heaven);
+}
+.food-card button img {
+  background: var(--primary);
+  padding: 0.5rem;
+  height: 32px;
+  margin-right: 1.2rem;
+}
+.slick-slide {
+  margin: 0 27px;
+}
+.slick-list {
+  margin: 0 -27px;
+}
+
+.slider-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: var(--primary);
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.prev-btn {
+  position: absolute;
+  top: 46%;
+  left: -3rem;
+  z-index: 1;
+}
+.next-btn {
+  position: absolute;
+  top: 46%;
+  right: -3rem;
+  z-index: 1;
+}
+
+.top-products .slider {
+  position: relative;
+}
+.top-products .btn-wrapper {
+  margin-top: 2rem;
+}
+.slick-track {
+  padding: 1rem 0;
+}
+section.about-meal img {
+  width: 85%;
+}
+.flex-1 {
+  flex: 1;
+}
+section.about-meal h2 {
+  font-family: "Raleway-bold";
+  font-size: 1.4rem;
+  color: var(--secondary);
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+section.about-meal p {
+  line-height: 1.7;
+  margin: 4rem;
+}
+section.our-services {
+  background: var(--light);
+  position: relative;
+  z-index: 0;
+}
+.service-card {
+  background: var(--heaven);
+  text-align: center;
+  padding: 2rem;
+  padding-top: 4rem;
+  border-radius: 4px;
+  position: relative;
+  margin-right: 2rem;
+}
+.card-wrapper {
+  margin-right: -2rem;
+  margin-top: 8rem;
+}
+.service-card img {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.service-card h2 {
+  font-family: " Raleway-bold ";
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.service-card p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.text-primary {
+  color: var(--primary);
+}
+section.big-deal {
+  background: linear-gradient(rgba(35, 43, 56, 0.9), rgba(35, 43, 56, 0.9)),
+    url(../images/food-table.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.timer {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  margin-right: -2rem;
+  margin-bottom: 2rem;
+}
+.timer div {
+  margin-right: 2rem;
+  background: var(--primary);
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.timer div span:first-child {
+  font-family: "Raleway-semibold";
+  font-size: 2.5rem;
+  color: var(--heaven);
+  margin-bottom: 0.05rem;
+}
+.timer div span:last-child {
+  font-family: "Raleway-medium";
+  font-size: 1rem;
+  color: var(--heaven);
+  margin-bottom: 0.05rem;
+}
+.text-pure {
+  color: var(--pure);
+}
+section.latest-news {
+  background: var(--light);
+  position: relative;
+  z-index: 0;
+}
+.article-wrapper {
+  display: flex;
+  margin-right: -2rem;
+}
+.card {
+  margin-right: 2rem;
+  background: var(--heaven);
+  border-radius: 5px;
+}
+.card img {
+  width: 100%;
+}
+.card-content {
+  padding: 2rem;
+}
+.post-meta {
+  margin-bottom: 1rem;
+}
+.comments {
+  margin-left: 1rem;
+}
+.card-content h2 {
+  font-family: "Raleway-bold";
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.card-content p {
+  line-height: 1.6;
+}
+.btn-wrapper {
+  margin-top: 2rem;
+}
+section.subscribe {
+  background: var(--primary);
+}
+.subscribe-inside div:first-child img {
+  width: 90%;
+}
+.subscribe-inside div:first-child {
+  flex: 1;
+}
+.subscribe-inside div:last-child {
+  flex: 1;
+}
+.subscribe-inside h1 {
+  font-family: "Raleway-Bold";
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.subscribe-inside p {
+  font-family: "Raleway-medium";
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5rem;
+}
+section.contact-us {
+  padding-top: 0;
+  padding: 0;
+}
+.input-wrap {
+  background: var(--heaven);
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+.input-wrap input {
+  width: 100%;
+  border: none;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+}
+.input-wrap button {
+  padding: 0.8rem 2rem;
+  border: none;
+  background: var(--primary);
+  color: var(--pure);
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.input-wrap button:hover {
+  background: var(--secondary);
+  outline: none;
+}
+.input-wrap input:focus {
+  outline: none;
+}
+.contact-info-wrapper {
+  padding: 4rem 0;
+  flex: 1;
+}
+
+.map {
+  flex: 1;
+  filter: grayscale(100%);
+}
+.contact-info {
+  display: flex;
+  justify-content: center;
+}
+.contact-info > div > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.contact-info > div > div img {
+  margin-right: 1rem;
+}
+.contact-info > div > div > div {
+  display: flex;
+  flex-direction: column;
+}
+.contact-info > div > div > div > span:first-child {
+  font-family: "Raleway-Bold";
+  margin-bottom: 0.25rem;
+}
+footer {
+  background: var(--footer);
+  padding: 4rem;
+}
+.lastpart {
+  display: flex;
+  color: var(--pure);
+}
+
+.box {
+  flex: 1;
+  margin-right: 2rem;
+  text-align: center;
+}
+.instagram-api img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.post-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.post-wrapper > div {
+  width: calc(1 / 3 * 100%- (1-1 / 3) * 10px);
+  margin-bottom: 10px;
+}
+.box ul {
+  list-style-type: none;
+}
+.box ul li a {
+  color: var(--pure);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.box ul li a :hover {
+  color: var(--primary);
+}
+.box h3 {
+  border-bottom: 1px solid var(--primary);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.box p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.box ul li {
+  margin-bottom: 1rem;
+}
+.box:nth-child(3) {
+  text-align: left;
+}
+.box:nth-child(3) div {
+  display: flex;
+  justify-content: center;
+}
+.box:nth-child(3) h3 {
+  text-align: center;
+}
+.box:nth-child(3) > div img {
+  margin-right: 1rem;
+}
+.box:nth-child(3) ul li {
+  margin-bottom: 1.5rem;
+}
+.copyright {
+  padding: 1rem;
+  background: var(--secondary);
+  color: var(--pure);
+  text-align: center;
+  font-size: 0.75rem;
+}
+.copyright a {
+  color: var(--primary);
+  text-decoration: none;
+}
